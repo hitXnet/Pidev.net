@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Web.notefraisemploye>
+
+@{
+    ViewBag.Title = "Accueil";
+}
+
+<h2>Liste des notes de frais</h2>
+<div>
+   
+</div>
+
+
+
+
+<div class="card-body">
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>idfraisem</th>
+                    <th>naturefraisem</th>
+                    <th>descriptionem</th>
+                    <th>montantfraisem</th>
+                    <th>Actions</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var i in ViewBag.result)
+                {
+                <tr>
+                    <td>@i.idfraisem</td>
+                    <td>@i.naturefraisem</td>
+                    <td>@i.descriptionem</td>
+                    <td>@i.montantfraisem</td>
+                    <td> <a href="@Url.Action("remove","Emp", new {id=@i.idfraisem })"
+                            class="btn btn-primary btn-lg">delete</a></td>
+                </tr>
+                }
+
+
+
+            </tbody>
+
+        </table>
+    </div>
+    <script type="text/javascript">
+        function removeObj(url) {
+            var oReq = new XMLHttpRequest();
+            oReq.addEventListener("load", function () {
+                location.reload();
+            });
+            oReq.open("DELETE", url);
+            oReq.setRequestHeader("Access-Control-Allow-Origin", "*");
+            oReq.send();
+        }
+    </script>
+</div>
+<a href="ImportExcel" class="btn btn-info btn-icon-split">
+    <span class="icon text-white-50">
+        <i class="fas fa-info-circle"></i>
+    </span>
+    <span class="text">Généer les frais en document Excel</span>
+</a>

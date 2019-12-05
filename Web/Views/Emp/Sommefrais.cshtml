@@ -1,0 +1,85 @@
+﻿@model Web.Controllers.statViewModel
+@{
+    ViewBag.Title = "Sommefrais";
+
+    var data = ViewData.Model;
+
+}
+
+<h1>Ci joint la  somme de vos dépenses pendant votre derniére mission :</h1>
+
+<h3>Somme des Frais de Transport:</h3>
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-success shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Transport</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">$@Model.trans</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<h3>Somme des Frais de Restauration</h3>
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-success shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Restauration</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">$@Model.rest</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<h3>Somme des Frais d'Hébérgement:</h3>
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-success shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Hébérgement</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">$@Model.heberg</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<h3>Somme des Frais Extra:</h3>
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-success shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Extra</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">$@Model.extra</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
