@@ -1,0 +1,49 @@
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\Solution.Service.dll
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\Solution.Service.pdb
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\Service.Pattern.dll
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\Solution.Data.dll
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\Solution.Domain.dll
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\EntityFramework.dll
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\Service.Pattern.pdb
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\Solution.Data.pdb
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\Solution.Data.dll.config
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\Solution.Domain.pdb
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\Solution.Domain.dll.config
+C:\Users\asus\source\repos\Solution\Solution.Service\bin\Debug\EntityFramework.xml
+C:\Users\asus\source\repos\Solution\Solution.Service\obj\Debug\Solution.Service.csprojAssemblyReference.cache
+C:\Users\asus\source\repos\Solution\Solution.Service\obj\Debug\Solution.Service.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\Solution\Solution.Service\obj\Debug\Solution.Service.csproj.CopyComplete
+C:\Users\asus\source\repos\Solution\Solution.Service\obj\Debug\Solution.Service.dll
+C:\Users\asus\source\repos\Solution\Solution.Service\obj\Debug\Solution.Service.pdb
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Solution.Service.dll.config
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Solution.Service.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Solution.Service.pdb
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\EntityFramework.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\EntityFramework.SqlServer.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\MySql.Data.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\MySql.Data.Entity.EF6.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Newtonsoft.Json.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Service.Pattern.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Solution.Data.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Solution.Domain.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\System.Net.Http.Extensions.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\System.Net.Http.Formatting.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\System.Net.Http.Primitives.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Service.Pattern.pdb
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Service.Pattern.dll.config
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Solution.Data.pdb
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Solution.Data.dll.config
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Solution.Domain.pdb
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Solution.Domain.dll.config
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\EntityFramework.xml
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\EntityFramework.SqlServer.xml
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\MySql.Data.xml
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\MySql.Data.Entity.EF6.xml
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\Newtonsoft.Json.xml
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\System.Net.Http.Formatting.xml
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\fr\EntityFramework.resources.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\obj\Debug\Solution.Service.csprojAssemblyReference.cache
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\obj\Debug\Solution.Service.csproj.CopyComplete
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\obj\Debug\Solution.Service.dll
+F:\ERPBI2NE\ERPBI2NE\[Séance 8] MVC + Solution Vide\Solution vide\Solution-2019\Solution\Solution.Service\obj\Debug\Solution.Service.pdb
