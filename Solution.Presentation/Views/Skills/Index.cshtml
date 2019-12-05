@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+
+    <a href="@Url.Action("Create", "Skills")">add new skill</a>
+    <table cellpadding="2" cellspacing="2" border="1">
+        <tr>
+
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Note</th>
+            <th>Backing</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var p in ViewBag.result)
+        {
+            <tr>
+                
+                <td>@p.Idskill</td>
+                <td>@p.Nom</td>
+                <td>@p.Note</td>
+                <td>@p.backing</td>
+                <td> @Html.ActionLink("Delete", "Delete", new { Nom = p.Nom })</td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>
+

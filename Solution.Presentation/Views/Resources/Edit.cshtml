@@ -1,0 +1,129 @@
+﻿@model Solution.Presentation.Models.ResourcesVM
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/olfa_layout.cshtml";
+}
+<style>
+    /* Set the size of the div element that contains the map */
+    #map {
+        height: 400px; /* The height is 400 pixels */
+        width: 600px; /* The width is the width of the web page */
+    }
+</style>
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Resources</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ResourceId)
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.TypeResource, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TypeResource, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TypeResource, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date_Location, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date_Location, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Date_Location, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Latitude, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Latitude, new { htmlAttributes = new { @class = "form-control", @id = "txt_lat", @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.Latitude, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Longitude, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Longitude, new { htmlAttributes = new { @class = "form-control",@id = "txt_lng" , @readonly = "readonly" } })
+                @Html.ValidationMessageFor(model => model.Longitude, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+<div id="map"></div>
+<script>
+    function initMap() {
+
+        var myLatlng = new google.maps.LatLng(@Model.Latitude, @Model.Longitude);
+        var mapOptions = {
+            zoom: 8,
+            center: myLatlng
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        // Place a draggable marker on the map
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            draggable: true,
+            title: "Drag me!"
+        });
+        var lat = marker.getPosition().lat();
+        var lng = marker.getPosition().lng();
+        console.log(lat);
+        google.maps.event.addListener(marker, 'dragend', function () {
+
+            // Get the Current position, where the pointer was dropped
+            var point = marker.getPosition();
+            // Center the map at given point
+            map.panTo(point);
+            // Update the textbox
+            ///document.getElementById('txt_latlng').value = point.lat() + ", " + point.lng();
+            document.getElementById('txt_lat').value = point.lat();
+            document.getElementById('txt_lng').value = point.lng();
+        });
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+            maxWidth: 400
+        });
+
+        marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });
+
+    }
+
+</script>
+@*<div>
+    Latitude, Longitude <input type="text" value="37.7699298, -122.4469157" name="txt_latlng" id="txt_latlng" style="width:480px;">
+</div>*@
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLn_LyB2kKrr3vtQl05eFk3xwqvuGGsNs&callback=initMap">
+</script>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

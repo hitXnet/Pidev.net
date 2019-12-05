@@ -1,0 +1,145 @@
+﻿@model IEnumerable<Solution.Presentation.Models.ResourcesVM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/olfa_layout.cshtml";
+}
+<style>
+    /* Set the size of the div element that contains the map */
+    #map {
+        height: 400px; /* The height is 400 pixels */
+        width: 600px; /* The width is the width of the web page */
+    }
+</style>
+
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+
+
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Latitude)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Longitude)
+                </td>
+
+
+
+                <td>
+                    <a href="@Url.Action("Edit", new {id = item.ResourceId})"><span class="glyphicon glyphicon-edit"></span>&nbsp;Edit</a>
+                    &nbsp;|&nbsp;<a href="@Url.Action("Delete", new { id = item.ResourceId})"><span class="glyphicon glyphicon-trash"></span>&nbsp;Delete</a>
+
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.ResourceId })
+                    @Html.ActionLink("Details", "Details", new { id = item.ResourceId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ResourceId })*@
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<div id="map"></div>
+
+
+
+
+
+
+
+<script>
+
+    function initMap() {
+
+        var mapCanvas = document.getElementById('map');
+        var tunis = new google.maps.LatLng(36.5291996, 9.415628);
+        var mapOptions = {
+            center: tunis,
+            zoom: 8,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+
+        @foreach (var item in Model)
+        {
+        <text>
+        //var location = new google.maps.LatLng(@item.Latitude, @item.Longitude);
+
+        var marker = new google.maps.Marker({
+            position:{ lat: @item.Latitude, lng: @item.Longitude },
+            map: map,
+            title:"@item.Description"
+        });
+
+
+        marker['infowindow'] = new google.maps.InfoWindow({
+            content: "@item.Description"
+        });
+        @*var contentString = @item.Description;
+
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString,
+
+        });*@
+        </text>
+    }
+
+    //var marker = new google.maps.Marker({
+    //    position: madrid,
+    //    map: map
+    //});
+
+
+        google.maps.event.addListener(marker, 'mouseover', function() {
+            this['infowindow'].open(map, this);
+        });
+    //marker.addListener('click', function () {
+    //    infowindow.open(map, marker);
+    //});
+
+
+    }
+
+
+
+</script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLn_LyB2kKrr3vtQl05eFk3xwqvuGGsNs&callback=initMap">
+</script>
+
+
