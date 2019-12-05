@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "dashboard";
+   
+}
+
+<h2>dashboard absence par employe </h2>
+<style>
+    #chart-container {
+        width: 400px;
+        height: 400px;
+        border: 1px solid #ddd;
+        padding: 1px;
+        border-radius: 4px;
+    }
+</style>
+<script src="~/Scripts/Chart.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<!---<script src="~/Scripts/bootstrap.min.js"></script>--
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />-->
+<div id="chart-container">
+    <canvas id="bar_chart"></canvas>
+</div>
+
+<script>
+    var repArray =@Html.Raw(Json.Encode(ViewBag.REP));
+    var Vues=@Html.Raw(Json.Encode(ViewBag.Vues));
+    var ctx=$("#bar_chart");
+    var bacChart=new Chart(ctx,{
+
+        type:'bar',
+        data:{
+
+            labels:Vues,
+                datasets:[{
+                            label:'bar chart',
+                            data:repArray,
+                            backgroundColor:["rgba(44, 130, 201, 1)","(0, 181, 204, 1)","(137, 196, 244, 1)"],
+                            borderColor:["rgb(44, 130, 201)","rgb(0, 181, 204)","rgb(137, 196, 244)"],
+                            borderWidth:1
+                         }]
+
+            },
+
+        options:{
+                  maintainAspectRatio:false,
+                  scales:{
+                      yAxes:[{
+                          ticks:{beginAtZero:true}
+
+                      } ]
+
+                  },
+                  legend:{display:false}
+                 }
+
+    });
+</script>
+
+
+

@@ -1,0 +1,55 @@
+﻿@model Data.employe
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="=" width="device-width" />
+    <title> Forum</title>
+</head>
+<body>
+    <div class="card-body">
+        <div class="table-responsive">
+            <a href="~/Views/Employe/Create.cshtml">Ajouter un employé </a>
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Login</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    
+                </tr>
+                @foreach (var m in ViewBag.result)
+                {
+                    <tr>
+                        <td>@m.emp_id</td>
+                        <td>@m.name</td>
+                        <td>@m.login</td>
+                        <td>
+                            @m.email
+
+                        </td>
+                        <td>@m.password</td>
+                        <td>
+                            <a href="@Url.Action("remove","Employe", new {id=@m.emp_id })"
+                               class="btn btn-primary btn-lg">delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+        function removeObj(url) {
+            var oReq = new XMLHttpRequest();
+            oReq.addEventListener("load", function () {
+                location.reload();
+            });
+            oReq.open("DELETE", url);
+            oReq.setRequestHeader("Access-Control-Allow-Origin", "*");
+            oReq.send();
+        }
+</script>
